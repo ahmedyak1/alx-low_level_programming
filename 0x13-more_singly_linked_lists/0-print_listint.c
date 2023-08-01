@@ -7,12 +7,15 @@
   * @h: single list to print
   * Return: Return: Count of nodes
   */
-size_t print_listint(const listint_t *h){
+size_t print_listint (const listint_t * h)
+{
   size_t j;
-  
-      for (j = 0; h ; j++){
-          printf ("%d \n", h->n);
-          h = h->next;
-      }
+
+  for (j = 0; h ; j++)
+    {
+      printf ("%d \n", h -> n);
+      h = h -> next;
+    }
+
   return (j);
 }
