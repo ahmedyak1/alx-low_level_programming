@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h> 
-
+#include <stdlib.h>
 /**
  * struct listint_s - More singly linked lists
  * @n: integeR
@@ -15,18 +15,6 @@ typedef struct listint_s
  int n;
  struct listint_s *next;
 } listint_t;
-
-/*** Task 0 print_listint*/
-/*** Task 1 listint_len*/
-/*** Task 2 add_nodeint*/
-/*** Task 3 add_nodeint_end*/
-/*** Task 4 free_listint*/
-/*** Task 5 free_listint2*/
-/*** Task 6 pop_listint*/
-/*** Task 7 get_nodeint_at_index*/
-/*** Task 8 sum_listint*/
-/*** Task 9 insert_nodeint_at_index*/
-/*** Task 10 delete_nodeint_at_index*/
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
