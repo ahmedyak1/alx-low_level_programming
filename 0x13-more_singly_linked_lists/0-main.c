@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * main - check the code
+ * main - Task 0 
  *
- * Return: Always 0.
+ * Return:  0.
  */
 int main(void)
 {
