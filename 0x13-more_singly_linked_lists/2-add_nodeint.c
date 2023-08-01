@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "lists.h"
-a
+
 /** Task 2 Add node
   * add_nodeint - add new nodes
   * @head: current position
