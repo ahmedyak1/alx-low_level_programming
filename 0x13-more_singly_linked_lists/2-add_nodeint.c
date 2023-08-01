@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include "lists.h"
-
+a
 /** Task 2 Add node
   * add_nodeint - add new nodes
   * @head: current position
   * @n: int to add
   * Return: pointer to current location
   */
-listint_t *
-add_nodeint (listint_t **head, const int n)
+listint_t *add_nodeint (listint_t **head, const int n)
 {
 
   listint_t *newList;
