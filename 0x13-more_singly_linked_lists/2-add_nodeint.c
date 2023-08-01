@@ -8,7 +8,7 @@
   * Return: pointer to current location
   */
 listint_t *
-add_nodeint (listint_t ** head, const int n)
+add_nodeint (listint_t **head, const int n)
 {
 
   listint_t *newList;
