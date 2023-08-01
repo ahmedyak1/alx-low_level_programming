@@ -10,6 +10,11 @@
  * @next: point of the next node
  *
  */
+typedef struct listint_s
+{
+ int n;
+ struct listint_s *next;
+} listint_t;
 
 /*** Task 0 print_listint*/
 /*** Task 1 listint_len*/
@@ -22,11 +27,6 @@
 /*** Task 8 sum_listint*/
 /*** Task 9 insert_nodeint_at_index*/
 /*** Task 10 delete_nodeint_at_index*/
-typedef struct listint_s
-{
- int n;
- struct listint_s *next;
-} listint_t;
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
