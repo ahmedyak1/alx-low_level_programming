@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+
 
 
 /** task 0 print list 
@@ -7,15 +7,16 @@
   * @h: single list to print
   * Return: Return: Count of nodes
   */
-size_t print_listint (const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
-  size_t j;
+ size_t j = 0;
 
-  for (j = 0; h ; j++)
-    {
-      printf ("%d \n", h -> n);
-      h = h -> next;
-    }
+ while (h)
+     {
+        printf("%d\n", h->n);
+        j++;
+        h = h->next;
+     }
 
-  return (j);
+ return (j);
 }
