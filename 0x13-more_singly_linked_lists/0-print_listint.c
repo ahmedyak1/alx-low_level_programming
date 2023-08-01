@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 
 
 /** task 0 print list 
