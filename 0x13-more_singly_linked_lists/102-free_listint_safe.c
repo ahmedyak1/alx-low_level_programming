@@ -14,7 +14,7 @@ free_listint_safe (listint_t ** h)
   int j;
   listint_t *temporary;
 
-  if (h != NULL || !*h)
+  if (h == NULL || !*h)
     return (0);
 
   while (*h)
