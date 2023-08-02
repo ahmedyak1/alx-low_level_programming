@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * task 12 looped listint
@@ -11,7 +10,8 @@
 size_t
 looped_listint_len (const listint_t * head)
 {
-  const listint_t *a, const listint_t *b;
+  const listint_t *a;
+  const listint_t *b;
   size_t nodesNumber = 1;
 
   if (head == NULL || head->next == NULL)
