@@ -16,14 +16,7 @@ struct dog
   float age;
   char *owner;
 };
-/**
- * Task 0 define struct dog
- * Task 3 dog_t
- * Task 1 init_dog
- * Task 2 print_dog
- * Task 4 dog_t new_dog
- * Task 5 free_dog
- */
+
 
 typedef struct dog dog_t;
 
