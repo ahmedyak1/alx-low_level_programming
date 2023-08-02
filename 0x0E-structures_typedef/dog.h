@@ -22,7 +22,7 @@ typedef struct dog;
 void init_dog (struct dog *d, char *name, float age, char *owner);
 /* Task 2 print_dog*/
 void print_dog (struct dog *d);
-/* Task 4 dog_t new_dog/
+/* Task 4 dog_t new_dog*/
 dog_t *new_dog (char *name, float age, char *owner);
 int _strlen (char *s);
 char *_strcpy (char *dest, char *src);
