@@ -10,11 +10,16 @@
  * 
  * Return: 1 for succcced else for failure
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int
+set_bit (unsigned long int *n, unsigned int index)
 {
-	if (index > 63)
-		return (-1);
+  unsigned int j;
 
-	*n = ((1UL << index) | *n);
-	return (1);
+  if (index > 63)
+            return (-1);
+
+  j = 1 << index;
+  *n = (*n | j);
+  return (1);
 }
+
