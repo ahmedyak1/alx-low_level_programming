@@ -7,8 +7,7 @@
  * 
  * Return: number converter
  */
-unsigned int
-binary_to_uint (const char *b)
+unsigned int binary_to_uint (const char *b)
 {
   unsigned int a;
   int j; 
@@ -35,3 +34,4 @@ binary_to_uint (const char *b)
 
   return (a);
 }
+
