@@ -7,25 +7,31 @@
  * 
  * Return: number converter
  */
-  unsigned int
+unsigned int
 binary_to_uint (const char *b)
 {
-  unsigned int valeur = 0;
-  int a;
+  unsigned int a;
+  int j; 
+  int base;
 
-
-  if (b == NULL)
+  if (b==NULL)
     return (0);
 
-  for (a = 0; b[a]; a++)
-    {
-      if (b[a] < '0' || b[a] > '1')
-	return (0);
+  a = 0;
 
-      valeur = 2 * valeur + (b[a] - '0');
+  for (j = 0; b[j] != '\0'; j++)
+    ;
+
+  for (j--, base = 1; j >= 0; j--, base *= 2)
+    {
+      if (b[j] != '0' && b[j] != '1')
+	  return (0);
+	
+      if (b[j] & 1)
+	{
+	        a += base;
+	}
     }
 
-
-  return (valeur);
+  return (a);
 }
-
