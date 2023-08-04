@@ -11,26 +11,15 @@
 void
 print_binary (unsigned long int n)
 {
-
-  unsigned long int curr;
-  int a;
-  int b = 0;
-
-
-  for (a = 63; a >= 0; a--)
+  if (n >> 0)
     {
-      curr = n >> a;
-
-      if (curr & 1)
-	{
-	  _putchar ('1');
-
-	  b++;
-	}
-      else if (b)
-	_putchar ('0');
-
+      if (n >> 1)
+	print_binary (n >> 1);
+      _putchar ((n & 1) + '0');
     }
-  if (b == NULL)
-    _putchar ('0');
+  else
+    {
+      _putchar ('0');
+    }
 }
+
