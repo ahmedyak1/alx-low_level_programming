@@ -5,24 +5,32 @@
  * @n:The data integer
  * Return: The new item
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *newmim;
+	dlistint_t *nm;
+	dlistint_t *ld;
 
-	newmim = malloc(sizeof(dlistint_t));
+	nm = malloc(sizeof(dlistint_t));
 
-	if (!newmim)
+	if (nm == NULL)
 		return (NULL);
 
-    	newmim->next = *head;
-	newmim->n = n;
-	newmim->prev = NULL;
-	
+	nm->n = n;
+	nm->next = NULL;
+	nm->prev = NULL;
+	if (*head == NULL)
+	{
+		*head = nm;
+		return (nm);
+	}
+	ld = *head;
 
-	if (*head)
-		(*head)->prev = newmim;
-	*head = newmim;
+	while (ld->next != NULL)
+		ld = ld->next;
+	ld->next = nm;
+	nm->prev = ld;
 
-	return newmim;
+	return (nm);
 }
 
