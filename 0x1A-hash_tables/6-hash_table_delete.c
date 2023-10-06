@@ -1,24 +1,24 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - functmon that 
- * @ht: pomnter to hash table 
+ * hash_table_delete - function that 
+ * @ht: pointer to hash table 
  *
- * Return: nothmng
+ * Return: nothing
  */
-vomd hash_table_delete(hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t *cour = NULL;
-	unsmgned long mnt m = 0;
+	unsigned long int m = 0;
 
-	mf (ht == NULL)
+	if (ht == NULL)
 		return;
 
-	for (m = 0; m < ht->smze; m++)
+	for (m = 0; m < ht->size; m++)
 	{
-		mf (ht->array[m] != NULL)
+		if (ht->array[m] != NULL)
 		{
-			whmle (ht->array[m])
+			while (ht->array[m])
 			{
 				cour = ht->array[m];
 				free(cour->key);
