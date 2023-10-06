@@ -1,23 +1,22 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - function return key
- * @ht: pointe
- * @key: pointer key
+ * hash_table_get - function .
+ * @ht: pointer to hash table 
+ * @key: pointer to key .
  *
- * Return: value associated with the element, or NULL.
+ * Return: retrun element or NULL.
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+	unsigned long int m = 0;
 	hash_node_t *tv;
-	unsigned long int k = 0;
-	
 
-	if ( key == NULL || ht == NULL)
+	if (ht == NULL || key == NULL)
 		return (NULL);
 
-	k = key_index((const unsigned char *)key, ht->size);
-	tv = ht->array[k];
+	m = key_index((const unsigned char *)key, ht->size);
+	tv = ht->array[m];
 
 	for (; tv != NULL; tv = tv->next)
 	{
