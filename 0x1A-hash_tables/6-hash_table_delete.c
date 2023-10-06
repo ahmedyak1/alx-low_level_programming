@@ -1,15 +1,15 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - delete hash table .
- * @ht: pointer
+ * hash_table_delete - function 
+ * @ht: pointer to hash table.
  *
+ * Return: nothinf
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int k = 0;
 	hash_node_t *cur = NULL;
-	
+	unsigned long int k = 0;
 
 	if (ht == NULL)
 		return;
@@ -21,9 +21,13 @@ void hash_table_delete(hash_table_t *ht)
 			while (ht->array[k])
 			{
 				cur = ht->array[k];
+				
 				free(cur->key);
+				
 				free(cur->value);
+				
 				ht->array[k] = ht->array[k]->next;
+				
 				free(cur);
 			}
 		}
