@@ -18,6 +18,5 @@
                        nei += 1
                    if n < t - 1 and grid[m][n + 1] == 1:
                        nei += 1 
-                      
-       return lan * 4 - 2 * nei
+                        return lan * 4 - 2 * nei
 
