@@ -4,9 +4,10 @@
 
 /**
  * primary entrance point.
- *
  * Return: Always EXIT_SUCCESS
  */
+
+
 int main(void)
 {
 	int array[] = {
